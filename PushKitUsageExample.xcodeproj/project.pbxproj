@@ -36,6 +36,7 @@
 		3372775E22297ABA00504457 /* PushKitUsageExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushKitUsageExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3372776222297ABA00504457 /* PushKitUsageExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushKitUsageExampleTests.swift; sourceTree = "<group>"; };
 		3372776422297ABA00504457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3372776D22299C7900504457 /* PushKitUsageExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushKitUsageExample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		3372774C22297AB900504457 /* PushKitUsageExample */ = {
 			isa = PBXGroup;
 			children = (
+				3372776D22299C7900504457 /* PushKitUsageExample.entitlements */,
 				3372774D22297AB900504457 /* AppDelegate.swift */,
 				3372774F22297AB900504457 /* ViewController.swift */,
 				3372775122297AB900504457 /* Main.storyboard */,
@@ -146,6 +148,14 @@
 				TargetAttributes = {
 					3372774922297AB900504457 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					3372775D22297ABA00504457 = {
 						CreatedOnToolsVersion = 10.1;
@@ -360,8 +370,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushKitUsageExample/PushKitUsageExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FX7X5MR74;
 				INFOPLIST_FILE = PushKitUsageExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,8 +390,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushKitUsageExample/PushKitUsageExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FX7X5MR74;
 				INFOPLIST_FILE = PushKitUsageExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
